@@ -19,9 +19,11 @@ from tests.evals.competency_test import CompetencyTest
 from tests.evals.llm_clients import BedrockClient, LLMClient, OpenAIClient
 from tests.evals.mcp_tool_tracer import MockedMCPServer
 from tests.evals.test_alert_grouping_settings import ALERT_GROUPING_SETTINGS_COMPETENCY_TESTS
+from tests.evals.test_change_events import CHANGE_EVENTS_COMPETENCY_TESTS
 from tests.evals.test_event_orchestrations import EVENT_ORCHESTRATIONS_COMPETENCY_TESTS
 from tests.evals.test_incident_workflows import INCIDENT_WORKFLOW_COMPETENCY_TESTS
 from tests.evals.test_incidents import INCIDENT_COMPETENCY_TESTS
+from tests.evals.test_log_entries import LOG_ENTRY_COMPETENCY_TESTS
 from tests.evals.test_status_pages import STATUS_PAGES_COMPETENCY_TESTS
 from tests.evals.test_teams import TEAMS_COMPETENCY_TESTS
 
@@ -29,6 +31,7 @@ test_mapping = {
     "alert-grouping-settings": ALERT_GROUPING_SETTINGS_COMPETENCY_TESTS,
     "incidents": INCIDENT_COMPETENCY_TESTS,
     "incident-workflows": INCIDENT_WORKFLOW_COMPETENCY_TESTS,
+    "log-entries": LOG_ENTRY_COMPETENCY_TESTS,
     "teams": TEAMS_COMPETENCY_TESTS,
     "event-orchestrations": EVENT_ORCHESTRATIONS_COMPETENCY_TESTS,
     "status-pages": STATUS_PAGES_COMPETENCY_TESTS,
@@ -39,6 +42,8 @@ test_mapping = {
         + EVENT_ORCHESTRATIONS_COMPETENCY_TESTS
         + INCIDENT_WORKFLOW_COMPETENCY_TESTS
         + STATUS_PAGES_COMPETENCY_TESTS
+        + CHANGE_EVENTS_COMPETENCY_TESTS
+        + LOG_ENTRY_COMPETENCY_TESTS
     ),
 }
 
@@ -344,6 +349,7 @@ def main():
             "event-orchestrations",
             "incident-workflows",
             "incidents",
+            "log-entries",
             "services",
             "status-pages",
             "teams",
